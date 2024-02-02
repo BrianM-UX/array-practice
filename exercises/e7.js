@@ -6,6 +6,13 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
+  let planetsWithMoons = data.planets.filter(function(hasMoon) {
+    return hasMoon.moons
+  }).map(function(theyHaveMoons) {
+    return theyHaveMoons.name
+  })
+
+  return planetsWithMoons
 }
 
 
