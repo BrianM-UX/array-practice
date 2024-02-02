@@ -6,6 +6,12 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
+  return data.planets.reduce((acc, numberOfMoons) => { 
+    acc += numberOfMoons.moons?.length || 0;
+    return acc;
+  }, 0);
+
+
 }
 
 
